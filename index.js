@@ -1,18 +1,16 @@
-function appendToResult(value) {
-    document.getElementById('result').value += value;
-  }
-  
-  function clearResult() {
-    document.getElementById('result').value = '';
-  }
-  
-  function calculateResult() {
-    var input = document.getElementById('result').value;
-    try {
-      var result = eval(input);
-      document.getElementById('result').value = result;
-    } catch (error) {
-      document.getElementById('result').value = 'Error';
+const display = document.getElementById("display");
+function appendToDisplay(input){
+    display.value += input;
+}
+
+function clearDisplay(){
+    display.value = "";
+}
+function calculate(){
+    try{
+        display.value = eval(display.value);
     }
-  }
-  
+    catch(e){
+        display.value =  "Error";
+    }
+}
